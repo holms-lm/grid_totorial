@@ -1,20 +1,15 @@
 @import '_helpers/scss/reset';
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap-grid';
 
 //Variables
 @import '_helpers/scss/variables';
 
 //Components
-@import 'components/typography/typography';
-@import 'components/preloader/preloader';
-@import 'components/toast/toast';
+@import "blocks/grid/grid";
 
 // Forms
-@import 'blocks/forms/forms';
 
 // Block
-@import 'blocks/responsive_table/responsive_table';
-@import 'blocks/header/header';
 
 //Page
 @import 'pages/main/main';
