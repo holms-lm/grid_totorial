@@ -1,0 +1,7 @@
+{
+    "runner": "jest-runner-stylelint",
+    "displayName": "lint:scss",
+    "rootDir": "../../",
+    "moduleFileExtensions": ["scss"],
+    "testMatch": ["<rootDir>/private/**/*.scss"]
+}

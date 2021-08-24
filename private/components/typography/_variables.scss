@@ -1,0 +1,98 @@
+// @Global color
+$theme-colors: (
+  'primary': #fd7e14,
+  'secondary': #ffc107
+) !default;
+// @Global text style
+$typography_font__family: 'Avenir', sans-serif !default;
+$typography_font__size: 16px !default;
+$typography_line_height: 1.2 !default;
+$typography_text_color: #424242 !default;
+$typography_title_color: #000 !default;
+
+//Headers
+$typography_headers__family: $typography_font__family;
+$typography_headers__color: $typography_title_color;
+$typography_headers__margin-top: #{$typography_line_height * 2}rem;
+$typography_headers__margin-bottom: #{$typography_line_height + 0.2}rem;
+$typography_headers__sizes: (
+  h1: (
+    xs: 25px,
+    md: 30px,
+    xl: 32px
+  ),
+  h2: (
+    xs: 21px,
+    md: 27px,
+    xl: 28px
+  ),
+  h3: (
+    xs: 19px,
+    md: 22px,
+    xl: 24px
+  ),
+  h4: (
+    xs: 17px,
+    md: 20px,
+    xl: $typography_font__size * 1.125
+  ),
+  h5: (
+    xs: 13px,
+    md: 14px,
+    xl: $typography_font__size
+  ),
+  h6: (
+    xs: 12px,
+    md: 13px,
+    xl: $typography_font__size * 0.9375
+  )
+) !default;
+// font weight
+$typography_headers__weights: (
+  h1: 700,
+  h2: 600,
+  h3: 500,
+  h4: 400,
+  h5: 400,
+  h6: 400
+) !default;
+// Links
+$typography_link__color: #0e76bc !default;
+$typography_link__outline: none !default;
+$typography_link__decoration: none !default;
+$typography_link__hover-color: #0461a0 !default;
+$typography_link__hover-decoration: none !default;
+$typography_link__active-color: lighten($typography_link__color, 5%) !default;
+$typography_link__focus-color: #005690 !default;
+// List
+$typography_ol_li__border: map-get($theme-colors, primary) !default;
+$typography_ol_li__color: map-get($theme-colors, primary) !default;
+$typography_ul_li__bg: map-get($theme-colors, primary) !default;
+// Mark
+$typography_mark__padding: 0 0.2em !default;
+$typography_mark__color: $typography_text_color !default;
+$typography_mark__bg-color: #feec91 !default;
+// PRE | CODE | KBD | SAMP
+$typography_pre__bg-color: #f5f5f5 !default;
+$typography_pre__padding: 15px !default;
+$typography_code__bg-color: #f5f5f5 !default;
+$typography_code__color: #e83e8c !default;
+$typography_kbd__bg-color: #e1f0fa !default;
+$typography_kbd__color: #000 !default;
+$typography_samp__bg-color: #f7f8e2 !default;
+// Table
+$typography_table_border-color: #ccc !default;
+$typography_th_color: #ddd !default;
+$typography_th_td_padding: 10px !default;
+$typography_tr-zebra_bg: #eee !default;
+$typography_table__border-color: #ccc;
+// Blockquote
+$typography_blockquote__border-radius: 0 !default;
+$typography_blockquote__border-color: #0e76bc !default;
+$typography_blockquote__padding: 15px !default;
+// Bold and strong
+$typography_bold_strong__color: inherit !default;
+// u and ins
+$typography_bold_strong__border-color: map-get($theme-colors, secondary);
+// HR
+$typography_hr__color: #000 !default;

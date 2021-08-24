@@ -1,0 +1,7 @@
+{
+    "runner": "jest-runner-eslint",
+    "displayName": "lint:js",
+    "rootDir": "../../",
+    "moduleFileExtensions": ["js"],
+    "testMatch": ["<rootDir>/private/**/*.js"]
+}

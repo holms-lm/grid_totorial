@@ -1,0 +1,41 @@
+extends:
+  [
+      "airbnb-base",
+      "plugin:boundaries/recommended" ,
+  ]
+
+plugins:
+  [ "boundaries" ]
+
+settings:
+  boundaries/types: [ "_helpers", "components", "blocks", "pages" ]
+  boundaries/alias:
+    _helpers: "private/_helpers"
+    components: "private/components"
+    blocks: "private/blocks"
+    pages: "private/pages"
+
+globals:
+  __: false
+
+env:
+  browser: true
+  node: true
+  jest: true
+  es6: true
+  jquery: true
+
+
+rules:
+  no-shadow: 'off'
+  no-console: 'off'
+  indent: [ 2, 2, { "SwitchCase": 1 } ]
+  linebreak-style: 'off'
+  boundaries/allowed-types: [ 2, {
+    "allow": {
+      "_helpers": [],
+      "components": [ "_helpers" ],
+      "blocks": [ "_helpers", "components" ],
+      "pages": [ "_helpers", "components", "blocks" ]
+    }
+  }]

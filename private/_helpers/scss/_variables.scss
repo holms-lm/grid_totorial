@@ -1,0 +1,42 @@
+//- ----------------------------------------------
+//- Grid and Container size
+//- ----------------------------------------------
+$body-min-width: 320px;
+
+// - ----------------------------------------------
+//- Z-index
+//- ----------------------------------------------
+$zindex-header: 2 !default;
+$zindex-preloader: 10 !default;
+
+//- ----------------------------------------------
+//- GLOBAL color
+//- ----------------------------------------------
+//Body colors
+$body-background: #f6f6f6;
+//Brand colors
+$brand-primary: #f7de2f;
+$brand-secondary: #0072b9;
+$brand-third: #7b8287;
+//Inform colors
+$brand-success: #23d27a;
+$brand-info: #2ba3e1;
+$brand-warning: #f87d3a;
+$brand-danger: #ea4335;
+
+//- ----------------------------------------------
+//- Bootstrap
+//- ----------------------------------------------
+$pagination-padding-x: 0.5rem;
+//- ----------------------------------------------
+//- TYPOGRAPHY
+//- ----------------------------------------------
+//Font
+$font-size-body: 16px;
+$font-family-primary: 'Avenir', sans-serif;
+//Font color
+$font-color-title: #000;
+$font-color-primary: #343434;
+$font-color-secondary: #808080;
+//Links colors
+$link-color: #005f99;

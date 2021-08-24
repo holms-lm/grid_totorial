@@ -1,0 +1,22 @@
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  &--static {
+    position: static;
+  }
+  &__type_message {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 2px;
+    background-color: grey;
+    &--alert {
+      background-color: $danger;
+    }
+  }
+  .toast-body {
+    background-color: #dbdbdb;
+  }
+}

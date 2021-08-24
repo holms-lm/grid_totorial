@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% include './_helpers/favicon/favicon.twig' %}
+  <title>{% block pageTitle %}Index Page{% endblock %}</title>
+</head>
+<body class="page {% block pageName %}{% endblock %}">
+<div class="d-flex flex-column vh-100">
+  {% include "./blocks/header/header.twig" %}
+  <main class="flex-grow-1 flex-shrink-0 container">
+    {% block pageContent %}
+        <div class="typography">
+          <h1>Page list</h1>
+          <ol>
+            <li>
+              <b>Main</b>: <a href="main.html">main.html</a>
+            </li>
+            <li>
+              <b>UI kit</b>: <a href="ui_kit.html">ui_kit.html</a>
+            </li>
+          </ol>
+          <hr>
+          <h1>Environment constants</h1>
+          <ol>
+            <li>
+              <b>NODE_ENV</b>: <code>{{ NODE_ENV }}</code>:
+            </li>
+            <li>
+              <b>FOLDER_PRIVATE_BASE</b>: <code>{{ FOLDER_PRIVATE_BASE }}</code>
+            </li>
+            <li>
+              <b>FOLDER_PUBLIC_BASE</b>: <code>{{ FOLDER_PUBLIC_BASE }}</code>
+            </li>
+          </ol>
+        </div>
+    {% endblock %}
+  </main>
+  {% include "./blocks/footer/footer.twig" %}
+</div>
+
+{% if env == 'local' %}
+  <script src="http://localhost:35729/livereload.js"></script>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+@import '_helpers/scss/reset';
+@import '~bootstrap/scss/bootstrap';
+
+//Variables
+@import '_helpers/scss/variables';
+
+//Components
+@import 'components/typography/typography';
+@import 'components/preloader/preloader';
+@import 'components/toast/toast';
+
+// Forms
+@import 'blocks/forms/forms';
+
+// Block
+@import 'blocks/responsive_table/responsive_table';
+@import 'blocks/header/header';
+
+//Page
+@import 'pages/main/main';
