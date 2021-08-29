@@ -69,4 +69,67 @@
         pariatur quia sunt?</p>
     </div>
   </div>
+  <h3>Размер и количество колонок</h3>
+  <h3>Сетка как bootstrap</h3>
+  <p>min-height = grid-auto-rows: minmax(100px, auto)</p>
+  <p>auto-fill и auto-fit. grid-template-columns: repeat(auto-fill, 200px); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))</p>
+  <h4>auto-fill: Ширина колонки 200px, колонки произвольное количество - сколько влезет по ширине</h4>
+  <div class="grid__content_auto">
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+  </div>
+  <hr>
+  <h4>auto-fill: Тоже, но ширина колонки 200px - это минимальное значение. В итоге ширина колонки растягивается, чтобы таблица была на всю ширину</h4>
+  <div class="grid__content_auto_1">
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+  </div>
+  <hr>
+  <h4>auto-fill: Пример если мало колонок остается место в конце строки</h4>
+  <div class="grid__content_auto_1">
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+  </div>
+  <hr>
+  <h4>auto-fit: отличие от auto-fill, что если колонок меньши ширины  страницы, то он их растягиват</h4>
+  <div class="grid__content_auto_fit">
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+  </div>
+  <hr>
+  <h4>auto-fit: если колонок достаточно, то поведение как и auto-fill</h4>
+  <div class="grid__content_auto_fit">
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+  </div>
+  <hr>
 </section>

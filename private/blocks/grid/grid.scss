@@ -2,27 +2,23 @@
   &__content {
     display: grid;
     grid-gap: 30px;
-    grid-template-areas:
-      'left'
+    grid-template-areas: 'left'
       'center'
       'bottom';
     @include media-breakpoint-up(md) {
-      grid-template-areas:
-      'left bottom'
-      'center center';
+      grid-template-areas: 'left bottom'
+        'center center';
       grid-template-columns: 100px 1fr;
     }
     @include media-breakpoint-up(xl) {
-      grid-template-areas:
-      'left center'
-      'bottom bottom';
+      grid-template-areas: 'left center'
+        'bottom bottom';
       grid-template-columns: max-content 1fr;
     }
   }
   &__left {
     grid-area: left;
   }
-
   &__center {
     grid-area: center;
     h4 {
@@ -78,9 +74,6 @@
       }
     }
     &_list {
-      @include media-breakpoint-up(md) {
-
-      }
       @include media-breakpoint-up(xl) {
         grid-row: 1 / 4;
       }
@@ -106,7 +99,36 @@
       }
     }
   }
-  &__secondary{
+  &__content_auto {
+    background-color: #2ba3e1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    &_1 {
+      background-color: #2ba3e1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    &_fit {
+      background-color: #2ba3e1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    &_col {
+      border: 1px solid;
+    }
+    &_test {
+      //grid-template-columns: repeat(auto-fill, 200px);
+      //grid-template-columns: 200px auto auto;
+      //grid-template-columns: min-content max-content auto;
+      //grid-template-columns: max-content auto auto;
+      //grid-template-columns: repeat(4, minmax(60px, min-content));
+      //grid-template-columns: repeat(4, minmax(50px, max-content));
+      //grid-template-columns: repeat(auto-fit, minmax(60px, min-content));
+      //grid-template-columns: repeat(auto-fit, minmax(min-content, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    }
+  }
+  &__secondary {
     background-color: grey;
   }
 }
