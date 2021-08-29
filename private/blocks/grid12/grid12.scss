@@ -1,0 +1,78 @@
+//colors
+//Spacing
+// Body (color, background)
+// Links
+// Paragraphs
+// Grid breakpoints
+//$grid-breakpoints: (
+//  xs: 0,
+//  sm: 576px,
+//  md: 768px,
+//  lg: 992px,
+//  xl: 1200px
+//) !default;
+// Grid containers
+//$container-max-widths: (
+//  sm: 540px,
+//  md: 720px,
+//  lg: 960px,
+//  xl: 1140px
+//) !default;
+// Grid columns
+//$grid-columns:                12 !default;
+//$grid-gutter-width:           30px !default;
+//$grid-row-columns:            6 !default;
+// Typography
+.container_grid {
+  width: 100%;
+  padding-right: $grid-gutter-width / 2;
+  padding-left: $grid-gutter-width / 2;
+  margin-right: auto;
+  margin-left: auto;
+  @each $breakpoint, $max-width in $container-max-widths {
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      max-width: $max-width;
+    }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, [col-start] 1fr);
+    grid-column-gap: $grid-gutter-width;
+    @for $column from 1 through $grid-row-columns {
+      &.grid-cols-#{$column} * {
+        grid-column: span ($grid-columns / $column);
+      }
+    }
+  }
+  .cell {
+    @for $column from 1 through $grid-columns {
+      &-#{$column} {
+        @extend .cell;
+        grid-column: span $column;
+      }
+    }
+  }
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @for $column from 1 through $grid-columns {
+      .cell-#{$breakpoint}-#{$column} {
+        @extend .cell;
+        @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+          grid-column: span $column;
+        }
+      }
+    }
+  }
+}
+.test {
+  border: 1px solid grey;
+  background-color: #e2e2e2;
+}
+*[class^='col'] div,
+*[class^='cell'] {
+  @extend .test;
+}
+.row-12_mobile {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
