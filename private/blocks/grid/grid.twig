@@ -1,7 +1,7 @@
-<section class="grid">
+<section class="">
   <h2>Grid варианты</h2>
   <h3>Вариант через template-areas</h3>
-  <div class="grid__content">
+  <div class="grid grid--area">
     <div class="grid__left">
       <ul>
         <li>list item</li>
@@ -11,12 +11,12 @@
       </ul>
     </div>
     <div class="grid__center">
-      <h4>Main content of grid layout</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias, aperiam at debitis doloribus earum eveniet
+      <h4 class="grid__title">Main content of grid layout</h4>
+      <p class="grid__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias, aperiam at debitis doloribus earum eveniet
         ex illum impedit officiis, praesentium quam quas qui, quibusdam rem reprehenderit similique sint sunt veritatis
         voluptatum. Ea exercitationem mollitia omnis! Ducimus iste possimus saepe? Commodi culpa maiores molestiae nisi
         quas quasi qui sed sequi.</p>
-      <img src="https://via.placeholder.com/728x350.png" alt="">
+      <img class="grid__img" src="https://via.placeholder.com/728x350.png" alt="">
     </div>
     <div class="grid__bottom">
       <p class="grid__secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum dignissimos ea
@@ -26,8 +26,8 @@
   </div>
   <hr>
   <h3>Вариант через column-start/end</h3>
-  <div class="grid__content_v2">
-    <div class="">
+  <div class="grid grid--row_column">
+    <div class="grid__left">
       <ul>
         <li>list item</li>
         <li>list item1</li>
@@ -35,35 +35,35 @@
         <li>list item3</li>
       </ul>
     </div>
-    <div class="grid__content_v2_center">
-      <h4>Main content of grid layout</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias, aperiam at debitis doloribus earum eveniet
+    <div class="grid__center">
+      <h4 class="grid__title">Main content of grid layout</h4>
+      <p class="grid__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias, aperiam at debitis doloribus earum eveniet
         ex illum impedit officiis, praesentium quam quas qui, quibusdam rem reprehenderit similique sint sunt veritatis
         voluptatum. Ea exercitationem mollitia omnis! Ducimus iste possimus saepe? Commodi culpa maiores molestiae nisi
         quas quasi qui sed sequi.</p>
-      <img src="https://via.placeholder.com/728x350.png" alt="">
+      <img class="grid__img" src="https://via.placeholder.com/728x350.png" alt="">
     </div>
-    <div class="grid__content_v2_bottom">
+    <div class="grid__bottom">
       <p class="grid__secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum dignissimos ea
         non quis sapiente tempora veritatis voluptatum! Accusamus ad adipisci, cupiditate est fuga hic iste magnam
         pariatur quia sunt?</p>
     </div>
   </div>
   <h3>Сложный шаблон в одноуровневой верстке</h3>
-  <div class="grid__content_v3">
-    <ul class="grid__content_v3_list">
+  <div class="grid grid--small_parts">
+    <ul class="grid__list">
       <li>list item</li>
       <li>list item1</li>
       <li>list item2</li>
       <li>list item3</li>
     </ul>
-    <h4 class="grid__content_v3_title">Main content of grid layout</h4>
-    <p class="grid__content_v3_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias, aperiam at
+    <h4 class="grid__title">Main content of grid layout</h4>
+    <p class="grid__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias, aperiam at
       debitis doloribus earum eveniet ex illum impedit officiis, praesentium quam quas qui, quibusdam rem reprehenderit
       similique sint sunt veritatis voluptatum. Ea exercitationem mollitia omnis! Ducimus iste possimus saepe? Commodi
       culpa maiores molestiae nisi quas quasi qui sed sequi.</p>
-    <img class="grid__content_v3_img" src="https://via.placeholder.com/728x350.png" alt="">
-    <div class="grid__content_v3_bottom">
+    <img class="grid__img" src="https://via.placeholder.com/728x350.png" alt="">
+    <div class="grid__bottom">
       <p class="grid__secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum dignissimos ea
         non quis sapiente tempora veritatis voluptatum! Accusamus ad adipisci, cupiditate est fuga hic iste magnam
         pariatur quia sunt?</p>
@@ -73,7 +73,8 @@
   <h3>Сетка как bootstrap</h3>
   <p>min-height = grid-auto-rows: minmax(100px, auto)</p>
   <p>auto-fill и auto-fit. grid-template-columns: repeat(auto-fill, 200px); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))</p>
-  <h4>auto-fill: Ширина колонки 200px, колонки произвольное количество - сколько влезет по ширине</h4>
+  <h4>auto-fill: Ширина колонки 200px, колонки произвольное количество - сколько влезет по ширине ( repeat(auto-fill, 200px) )</h4>
+  <p>auto-fit в данном случае имеет такое же поведение</p>
   <div class="grid__content_auto">
     <div class="grid__content_auto_col">col</div>
     <div class="grid__content_auto_col">col</div>
@@ -89,7 +90,7 @@
     <div class="grid__content_auto_col">col1</div>
   </div>
   <hr>
-  <h4>auto-fill: Тоже, но ширина колонки 200px - это минимальное значение. В итоге ширина колонки растягивается, чтобы таблица была на всю ширину</h4>
+  <h4>auto-fill + minmax: Тоже, но ширина колонки 200px - это минимальное значение. В итоге ширина колонки растягивается, чтобы таблица была на всю ширину ( repeat(auto-fill, minmax(200px, 1fr)) )</h4>
   <div class="grid__content_auto_1">
     <div class="grid__content_auto_col">col</div>
     <div class="grid__content_auto_col">col</div>
@@ -105,7 +106,8 @@
     <div class="grid__content_auto_col">col1</div>
   </div>
   <hr>
-  <h4>auto-fill: Пример если мало колонок остается место в конце строки</h4>
+  <h4>auto-fill + minmax: Пример если мало колонок остается место в конце строки</h4>
+  <p>Но зато ширина колонок такая, как если бы колонок было на всю ширину. То есть после добавление новых колонок ширина не измениться</p>
   <div class="grid__content_auto_1">
     <div class="grid__content_auto_col">col</div>
     <div class="grid__content_auto_col">col</div>
@@ -113,7 +115,8 @@
     <div class="grid__content_auto_col">col</div>
   </div>
   <hr>
-  <h4>auto-fit: отличие от auto-fill, что если колонок меньши ширины  страницы, то он их растягиват</h4>
+  <h4>auto-fit + minmax: отличие от auto-fill, что если колонок меньше ширины  страницы, то он их растягивает</h4>
+  <p>auto-fit имеет смысл только в сочитании с функцией minmax, чтобы менялся размер колонок</p>
   <div class="grid__content_auto_fit">
     <div class="grid__content_auto_col">col</div>
     <div class="grid__content_auto_col">col</div>
@@ -121,7 +124,7 @@
     <div class="grid__content_auto_col">col</div>
   </div>
   <hr>
-  <h4>auto-fit: если колонок достаточно, то поведение как и auto-fill</h4>
+  <h4>auto-fit + minmax: если колонок достаточно, то поведение как и auto-fill</h4>
   <div class="grid__content_auto_fit">
     <div class="grid__content_auto_col">col</div>
     <div class="grid__content_auto_col">col</div>
