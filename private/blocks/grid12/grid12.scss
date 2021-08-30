@@ -3,26 +3,26 @@
 // Body (color, background)
 // Links
 // Paragraphs
-// Grid breakpoints
-//$grid-breakpoints: (
-//  xs: 0,
-//  sm: 576px,
-//  md: 768px,
-//  lg: 992px,
-//  xl: 1200px
-//) !default;
-// Grid containers
-//$container-max-widths: (
-//  sm: 540px,
-//  md: 720px,
-//  lg: 960px,
-//  xl: 1140px
-//) !default;
-// Grid columns
-//$grid-columns:                12 !default;
-//$grid-gutter-width:           30px !default;
-//$grid-row-columns:            6 !default;
 // Typography
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+// Grid columns
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+$grid-row-columns:            6 !default;
 .container_grid {
   width: 100%;
   padding-right: $grid-gutter-width / 2;
