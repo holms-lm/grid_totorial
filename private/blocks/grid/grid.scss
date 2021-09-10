@@ -7,6 +7,7 @@
   }
   @include media-breakpoint-up(xl) {
     grid-template-columns: max-content 1fr;
+    //grid-template-columns: [start] max-content [middle] 1fr [end]; // Именованные линии
   }
   &__title {
     margin-top: 0;
@@ -50,6 +51,8 @@
         @include media-breakpoint-up(xl) {
           grid-column-start: 1;
           grid-column-end: 3;
+          //grid-column-start: start; // Именованные линии
+          //grid-column-end: end; // Именованные линии
           //grid-column: 1 / 3; // Сокращенный вариант
           //grid-column: span 2; // Ширина в 2 колонки
           //grid-column: 1/ span 2; // Ширина в 2 колонки начиная с первой линии
