@@ -73,6 +73,6 @@ $grid-row-columns:            6 !default;
 }
 .row-12_mobile {
   @include media-breakpoint-down(sm) {
-    display: none;
+    display: none!important;
   }
 }

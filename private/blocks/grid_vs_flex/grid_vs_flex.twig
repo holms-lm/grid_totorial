@@ -1,0 +1,110 @@
+<div class="container grid_vs_flex">
+    <h1>Что может grid по сравнению с flex и float</h1>
+    <section class="float">
+        <h2>Float</h2>
+            <div class="float_row">
+                <div class="float_col-6">Две колонки</div>
+                <div class="float_col-6">Две колонки</div>
+            </div>
+        <div class="float_row">
+            <div class="float_col-6">
+                <button class="float-rigth">Кнопка справа</button>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, possimus!</span>
+            </div>
+        </div>
+    </section>
+    <section class="flex">
+        <h2>flex</h2>
+        <div class="row-flex">
+            <div class="col-flex-g">Делим на равные части</div>
+            <div class="col-flex-g">Делим на равные части</div>
+        </div>
+        <div class="row-flex">
+            <div class="col-flex">Блоки в одной строке</div>
+            <div class="col-flex">Блоки в одной строке</div>
+            <p>И абзац тоже</p>
+        </div>
+        <p>Расположение по центру вертикально и горизонтально</p>
+        <div class="flex-center">
+            <p>абзац</p>
+        </div>
+        <p>Равномерное распределение</p>
+        <div class="flex-between">
+            <p>один</p>
+            <p>два</p>
+            <p>три</p>
+            <p>четыре</p>
+            <p>пять</p>
+        </div>
+
+    </section>
+    <section>
+        <h2>Grid</h2>
+        <div class="row-grid">
+            <div class="col-grid">Делим на равные части</div>
+            <div class="col-grid">Делим на равные части</div>
+        </div>
+        <div class="row-grid-blocks">
+            <div class="col-flex">Блоки в одной строке</div>
+            <div class="col-flex">Блоки в одной строке</div>
+            <p>И абзац тоже</p>
+        </div>
+        <p>Расположение по центру вертикально и горизонтально</p>
+        <div class="grid-center">
+            <p>абзац</p>
+        </div>
+      <p>Равномерное распределение</p>
+      <div class="row-grid-between">
+        <p>один</p>
+        <p class="empty"></p>
+        <p>два</p>
+        <p class="empty"></p>
+        <p>три</p>
+        <p class="empty"></p>
+        <p>четыре</p>
+        <p class="empty"></p>
+        <p>пять</p>
+      </div>
+      <p>Автоматическое заполнение колонками</p>
+      <div class="row-grid-multi">
+        <div class="col-grid">Делим на много колонки</div>
+        <div class="col-grid">Делим на много колонки</div>
+        <div class="col-grid">Делим на много колонки</div>
+      </div>
+      <p>Абсолютное позиционирование</p>
+        <div class="grid-rel">
+            <div class="box1">One</div>
+            <div class="box2">Two</div>
+            <div class="box3">
+              <p>Three</p>
+                Этот блок абсолютно позиционирован.
+                В нашем примере грид-контейнер является контейнерным блоком, поэтому значения сдвига абсолютного позиционирования отсчитываются от внешнего края той области, в которой размещён элемент.
+            </div>
+            <div class="box4">Four</div>
+        </div>
+        <div class="grid-wrapper">
+            <div class="box1">One</div>
+            <div class="box2">Two</div>
+            <div class="box3">Three
+                <div class="abspos">
+                    Этот блок абсолютно позиционирован. В данном примере контекстом позиционирования является грид-область, поэтому значения сдвига отсчитываются от внешних краёв грид-области.
+                </div>
+            </div>
+            <div class="box4">Four</div>
+        </div>
+      <p>z-index</p>
+      <div class="grid-rel">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">
+          <p>Three</p>
+          Этот блок абсолютно позиционирован.
+          В нашем примере грид-контейнер является контейнерным блоком, поэтому значения сдвига абсолютного позиционирования отсчитываются от внешнего края той области, в которой размещён элемент.
+        </div>
+        <div class="box4 front">Four<p>Перекрывать блоки можно не только абсолютно позицианированные, но и если настроить перекрытие областей с помощью grid-row и grid-column</p></div>
+        <div></div>
+        <div class="box5">Five
+        </div>
+      </div>
+    </section>
+</div>

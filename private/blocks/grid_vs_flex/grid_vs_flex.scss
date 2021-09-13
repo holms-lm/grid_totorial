@@ -1,0 +1,198 @@
+.grid_vs_flex {
+  //* {
+  //  box-sizing: border-box;
+  //}
+  //.container {
+  //  margin-right: auto;
+  //  margin-left: auto;
+  //  padding-left: 0;
+  //  padding-right: 0
+  //}
+  //.container:before, .container:after {
+  //  content: " ";
+  //  display: table
+  //}
+  //.container:after {
+  //  clear: both
+  //}
+  //@media (min-width: 768px) {
+  //  .container {
+  //    width: 720px
+  //  }
+  //}
+  //@media (min-width: 992px) {
+  //  .container {
+  //    width: 940px
+  //  }
+  //}
+  //@media (min-width: 1200px) {
+  //  .container {
+  //    width: 1170px
+  //  }
+  //}
+  .float_row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .float_row:before, .float_row:after {
+    content: " ";
+    display: table
+  }
+  .float_row:after {
+    clear: both
+  }
+  .float_clearfix:before, .clearfix:after {
+    content: " ";
+    display: table
+  }
+  .float_clearfix:after {
+    clear: both
+  }
+  @media (min-width: 992px) {
+    .float_col-1, .float_col-2, .float_col-3, .float_col-4, .float_col-5, .float_col-6, .float_col-7, .float_col-8, .float_col-9, .float_col-10, .float_col-11, .float_col-12 {
+      float: left;
+      border: 1px solid;
+      padding: 5px;
+    }
+    .float_col-3, .col-flex-3, .col-grid-3 {
+      width: 25%;
+    }
+    .float_col-6, .col-flex-6, .col-grid-6 {
+      width: 50%;
+    }
+    .float_col-12, .col-flex-12, .col-grid-12 {
+      width: 100%;
+    }
+  }
+  .float-rigth {
+    float: right;
+  }
+  .row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .col-flex {
+    border: 1px solid;
+    padding: 5px;
+  }
+  .col-flex-g {
+    border: 1px solid;
+    padding: 5px;
+    flex-grow: 1;
+  }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+  }
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-between p {
+    border: 1px solid;
+  }
+  .row-grid {
+    display: grid;
+    /*grid-template-rows: 1fr 1fr;*/
+    grid-template-columns: 1fr 1fr;
+    //grid-gap: 15px;
+  }
+  .row-grid-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: fit-content;
+  }
+  .row-grid-multi {
+    display: grid;
+    /*grid-template-rows: 1fr 1fr;*/
+    /*grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));*/
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    //grid-gap: 15px;
+  }
+  .row-grid-between {
+    display: grid;
+    //grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    //grid-template-columns: repeat(4, 1fr) auto;
+    grid-template-columns: repeat(4, auto 1fr) auto;
+    p {
+      width: fit-content;
+      border: 1px solid;
+      &.empty {
+        border: none;
+        width: auto;
+      }
+    }
+  }
+  .col-grid {
+    border: 1px solid;
+  }
+  .grid-center {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+  }
+  .grid-rel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+    position: relative;
+    > * {
+      border: 1px dashed;
+    }
+    .front {
+      z-index: 1;
+      background-color: wheat;
+      grid-column: 3 / span 1;
+      grid-row: 1 / span 2;
+    }
+  }
+  .grid-rel .box3 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  .grid-rel .box5 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    background-color: cadetblue;
+  }
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+    > * {
+      border: 1px dashed;
+    }
+  }
+  .grid-wrapper .box3 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
+  }
+  .grid-wrapper .box3 .abspos {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background-color: rgba(255, 255, 255, .5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: #000;
+    padding: 10px;
+  }
+}
