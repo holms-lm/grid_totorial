@@ -5085,4 +5085,20 @@ html {
   }
 }
 
+.conf_list {
+  display: block;
+}
+.conf_list__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.conf_list__text {
+  margin-right: 15px;
+  font-size: 16px;
+}
+
 /*# sourceMappingURL=main.css.map*/
