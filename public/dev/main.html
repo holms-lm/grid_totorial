@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Index Page</title>
+<link href="css/main.css" rel="stylesheet"></head>
+<body class="page page--main">
+<div class="d-flex flex-column vh-100">
+  <main class="flex-grow-1 flex-shrink-0">
+    
+  Main Page
+  <div class="container">
+  <h2>Образец bootstrap</h2>
+  <h3>Перенос колонок</h3>
+  <div class="row">
+    <div class="col-9"><div>.col-9</div></div>
+    <div class="col-4"><div>.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div></div>
+    <div class="col-6"><div>.col-6<br>Subsequent columns continue along the new line.</div></div>
+  </div>
+  <h3>row-cols-6</h3>
+  <div class="row row-cols-6">
+    <div class="col"><div>Col1</div></div>
+    <div class="col"><div>col2</div></div>
+    <div class="col"><div>col3</div></div>
+    <div class="col"><div>col4</div></div>
+    <div class="col"><div>Col5</div></div>
+    <div class="col"><div>col6</div></div>
+  </div>
+  <h3>12 колонок</h3>
+  <div class="row row-12_mobile">
+    <div class="col-1"><div>col1</div></div>
+    <div class="col-1"><div>col2</div></div>
+    <div class="col-1"><div>col3</div></div>
+    <div class="col-1"><div>col4</div></div>
+    <div class="col-1"><div>col5</div></div>
+    <div class="col-1"><div>col6</div></div>
+    <div class="col-1"><div>col7</div></div>
+    <div class="col-1"><div>col8</div></div>
+    <div class="col-1"><div>col9</div></div>
+    <div class="col-1"><div>col10</div></div>
+    <div class="col-1"><div>col11</div></div>
+    <div class="col-1"><div>col12</div></div>
+  </div>
+  <h3>Адаптивность</h3>
+  <div class="row">
+    <div class="col-6 col-md-4 col-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+    <div class="col-6 col-md-4 col-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+    <div class="col-6 col-md-4 col-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+    <div class="col-6 col-md-4 col-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+  </div>
+</div>
+<h2>То же но на grid</h2>
+<div class="container_grid">
+  <div class="grid">
+    <div class="cell-9">.col-9</div>
+    <div class="cell-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+    <div class="cell-6">.col-6<br>Subsequent columns continue along the new line.</div>
+  </div>
+  <h3>grid-cols-6</h3>
+  <div class="grid grid-cols-6">
+    <div class="cell"><div>Col1</div></div>
+    <div class="cell"><div>col2</div></div>
+    <div class="cell"><div>col3</div></div>
+    <div class="cell"><div>col4</div></div>
+    <div class="cell"><div>Col5</div></div>
+    <div class="cell"><div>col6</div></div>
+  </div>
+  <h3>12 колонок</h3>
+  <div class="grid row-12_mobile">
+    <div class="cell-1"><div>col1</div></div>
+    <div class="cell-1"><div>col2</div></div>
+    <div class="cell-1"><div>col3</div></div>
+    <div class="cell-1"><div>col4</div></div>
+    <div class="cell-1"><div>col5</div></div>
+    <div class="cell-1"><div>col6</div></div>
+    <div class="cell-1"><div>col7</div></div>
+    <div class="cell-1"><div>col8</div></div>
+    <div class="cell-1"><div>col9</div></div>
+    <div class="cell-1"><div>col10</div></div>
+    <div class="cell-1"><div>col11</div></div>
+    <div class="cell-1"><div>col12</div></div>
+  </div>
+  <h3>Адаптивность</h3>
+  <div class="grid">
+    <div class="cell-6 cell-md-4 cell-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+    <div class="cell-6 cell-md-4 cell-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+    <div class="cell-6 cell-md-4 cell-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+    <div class="cell-6 cell-md-4 cell-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+  </div>
+</div>
+
+  <div class="container">
+    <section class="">
+  <h2>Grid варианты</h2>
+  <h3>Вариант через template-areas</h3>
+  <div class="grid grid--area">
+    <div class="grid__left">
+      <ul>
+        <li>list item</li>
+        <li>list item1</li>
+        <li>list item2</li>
+        <li>list item3</li>
+      </ul>
+    </div>
+    <div class="grid__center">
+      <h4 class="grid__title">Main content of grid layout</h4>
+      <p class="grid__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias, aperiam at debitis doloribus earum eveniet
+        ex illum impedit officiis, praesentium quam quas qui, quibusdam rem reprehenderit similique sint sunt veritatis
+        voluptatum. Ea exercitationem mollitia omnis! Ducimus iste possimus saepe? Commodi culpa maiores molestiae nisi
+        quas quasi qui sed sequi.</p>
+      <img class="grid__img" src="https://via.placeholder.com/728x350.png" alt="">
+    </div>
+    <div class="grid__bottom">
+      <p class="grid__secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum dignissimos ea
+        non quis sapiente tempora veritatis voluptatum! Accusamus ad adipisci, cupiditate est fuga hic iste magnam
+        pariatur quia sunt?</p>
+    </div>
+  </div>
+  <hr>
+  <h3>Вариант через column-start/end</h3>
+  <div class="grid grid--row_column">
+    <div class="grid__left">
+      <ul>
+        <li>list item</li>
+        <li>list item1</li>
+        <li>list item2</li>
+        <li>list item3</li>
+      </ul>
+    </div>
+    <div class="grid__center">
+      <h4 class="grid__title">Main content of grid layout</h4>
+      <p class="grid__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias, aperiam at debitis doloribus earum eveniet
+        ex illum impedit officiis, praesentium quam quas qui, quibusdam rem reprehenderit similique sint sunt veritatis
+        voluptatum. Ea exercitationem mollitia omnis! Ducimus iste possimus saepe? Commodi culpa maiores molestiae nisi
+        quas quasi qui sed sequi.</p>
+      <img class="grid__img" src="https://via.placeholder.com/728x350.png" alt="">
+    </div>
+    <div class="grid__bottom">
+      <p class="grid__secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum dignissimos ea
+        non quis sapiente tempora veritatis voluptatum! Accusamus ad adipisci, cupiditate est fuga hic iste magnam
+        pariatur quia sunt?</p>
+    </div>
+  </div>
+  <h3>Сложный шаблон в одноуровневой верстке</h3>
+  <div class="grid grid--small_parts">
+    <ul class="grid__list">
+      <li>list item</li>
+      <li>list item1</li>
+      <li>list item2</li>
+      <li>list item3</li>
+    </ul>
+    <h4 class="grid__title">Main content of grid layout</h4>
+    <p class="grid__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias, aperiam at
+      debitis doloribus earum eveniet ex illum impedit officiis, praesentium quam quas qui, quibusdam rem reprehenderit
+      similique sint sunt veritatis voluptatum. Ea exercitationem mollitia omnis! Ducimus iste possimus saepe? Commodi
+      culpa maiores molestiae nisi quas quasi qui sed sequi.</p>
+    <img class="grid__img" src="https://via.placeholder.com/728x350.png" alt="">
+    <div class="grid__bottom">
+      <p class="grid__secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores cum dignissimos ea
+        non quis sapiente tempora veritatis voluptatum! Accusamus ad adipisci, cupiditate est fuga hic iste magnam
+        pariatur quia sunt?</p>
+    </div>
+  </div>
+  <h3>Размер и количество колонок</h3>
+  <h3>Сетка как bootstrap</h3>
+  <p>min-height = grid-auto-rows: minmax(100px, auto)</p>
+  <p>auto-fill и auto-fit. grid-template-columns: repeat(auto-fill, 200px); grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))</p>
+  <h4>auto-fill: Ширина колонки 200px, колонки произвольное количество - сколько влезет по ширине ( repeat(auto-fill, 200px) )</h4>
+  <p>auto-fit в данном случае имеет такое же поведение</p>
+  <div class="grid__content_auto">
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+  </div>
+  <hr>
+  <h4>auto-fill + minmax: Тоже, но ширина колонки 200px - это минимальное значение. В итоге ширина колонки растягивается, чтобы таблица была на всю ширину ( repeat(auto-fill, minmax(200px, 1fr)) )</h4>
+  <div class="grid__content_auto_1">
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+    <div class="grid__content_auto_col">col1</div>
+  </div>
+  <hr>
+  <h4>auto-fill + minmax: Пример если мало колонок остается место в конце строки</h4>
+  <p>Но зато ширина колонок такая, как если бы колонок было на всю ширину. То есть после добавление новых колонок ширина не измениться</p>
+  <div class="grid__content_auto_1">
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+  </div>
+  <hr>
+  <h4>auto-fit + minmax: отличие от auto-fill, что если колонок меньше ширины  страницы, то он их растягивает</h4>
+  <p>auto-fit имеет смысл только в сочитании с функцией minmax, чтобы менялся размер колонок</p>
+  <div class="grid__content_auto_fit">
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+  </div>
+  <hr>
+  <h4>auto-fit + minmax: если колонок достаточно, то поведение как и auto-fill</h4>
+  <div class="grid__content_auto_fit">
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+    <div class="grid__content_auto_col">col</div>
+  </div>
+  <hr>
+</section>
+
+  </div>
+
+  </main>
+</div>
+
+
+<script type="text/javascript" src="css/../js/main.js"></script></body>
+</html>
