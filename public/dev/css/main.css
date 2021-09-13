@@ -5158,10 +5158,8 @@ html {
 }
 .grid_vs_flex .row-grid-blocks {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  grid-template-columns: repeat(auto-fit, minmax(100px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
 }
 .grid_vs_flex .row-grid-multi {
   display: grid;

@@ -104,8 +104,7 @@
   }
   .row-grid-blocks {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    width: fit-content;
+    grid-template-columns: repeat(auto-fit, minmax(100px,max-content));
   }
   .row-grid-multi {
     display: grid;
