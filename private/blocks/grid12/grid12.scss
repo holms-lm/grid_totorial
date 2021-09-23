@@ -19,10 +19,16 @@ $container-max-widths: (
   lg: 960px,
   xl: 1140px
 ) !default;
-// Grid columns
 $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
 $grid-row-columns:            6 !default;
+$grid-max-widths: (
+  sm: 540px - $grid-gutter-width,
+  md: 720px - $grid-gutter-width,
+  lg: 960px - $grid-gutter-width,
+  xl: 1140px - $grid-gutter-width
+) !default;
+// Grid columns
 .container_grid {
   width: 100%;
   padding-right: $grid-gutter-width / 2;
@@ -34,6 +40,28 @@ $grid-row-columns:            6 !default;
       max-width: $max-width;
     }
   }
+}
+.container_grid_full {
+  display: grid;
+  @each $breakpoint, $max-width in $grid-max-widths {
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      //max-width: $max-width;
+      grid-template-columns:
+          [full-start] minmax($grid-gutter-width / 2, 1fr)
+          [main-start] minmax(0, $max-width) [main-end]
+          minmax($grid-gutter-width / 2, 1fr) [full-end];
+    }
+  }
+  > * {
+    grid-column: main;
+  }
+  > .full {
+    grid-column: full;
+  }
+}
+
+.container_grid,
+.container_grid_full {
   .grid {
     display: grid;
     grid-template-columns: repeat($grid-columns, [col-start] 1fr);
@@ -44,25 +72,36 @@ $grid-row-columns:            6 !default;
       }
     }
   }
+
   .cell {
     @for $column from 1 through $grid-columns {
       &-#{$column} {
-        @extend .cell;
-        grid-column: span $column;
+        grid-column-start: auto;
+        grid-column-end: span $column;
+      }
+      &-position-#{$column} {
+        grid-column-start: col-start $column;
       }
     }
   }
+
   @each $breakpoint in map-keys($grid-breakpoints) {
     @for $column from 1 through $grid-columns {
       .cell-#{$breakpoint}-#{$column} {
         @extend .cell;
         @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-          grid-column: span $column;
+          grid-column-end: span $column;
+        }
+      }
+      .cell-position-#{$breakpoint}-#{$column} {
+        @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+          grid-column-start: col-start $column;
         }
       }
     }
   }
 }
+
 .test {
   border: 1px solid grey;
   background-color: #e2e2e2;

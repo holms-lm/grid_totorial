@@ -1,0 +1,74 @@
+.section {
+  padding: 50px 0;
+}
+.gray_background {
+  background-color: darkgray;
+  font-size: 20px;
+}
+.socials_grid {
+  display: grid;
+  //grid-template-columns: repeat(3, minmax(max-content, 50px)); // Тоже вариант
+  grid-auto-flow: column;
+  grid-auto-columns: 50px;
+  grid-template-rows: 50px;
+  grid-gap: 20px;
+  &--min {
+    //grid-template-columns: repeat(3, fit-content(50px)); // Тоже вариант
+    grid-auto-columns: fit-content(50px);
+  }
+  &--vertical {
+    grid-auto-flow: row;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color 250ms;
+    &:hover {
+      background-color: #2ba3e1;
+    }
+    svg {
+      max-height: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.advantage {
+  display: grid;
+  grid-template-rows: 95px 30px auto;
+  >p {
+    margin: 0;
+  }
+  &__title {
+    font-weight: bold;
+  }
+}
+.user_card {
+  display: grid;
+  grid-template-rows: auto 20px auto 1fr;
+  grid-row-gap: 15px;
+  >p {
+    margin: 0;
+  }
+  &__title {
+    font-weight: bold;
+  }
+  &__button {
+    align-self: end;
+  }
+}
+.button_bottom {
+  grid-column: span 3;
+  display: grid;
+  grid-template-rows: 1fr;
+  &__text {
+    background-color: antiquewhite;
+    padding-left: 30px;
+  }
+  //button {
+  //  align-self: end;
+  //}
+}

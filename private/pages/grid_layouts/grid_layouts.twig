@@ -1,0 +1,98 @@
+{% extends '../../index.twig' %}
+
+{% block pageName %}page--grid_layouts{% endblock %}
+
+{% block pageContent %}
+  <div class="container_grid_full">
+    <h1>Несколько идей как сверстать обычные вещи с использованием display: grid</h1>
+    <p>Вся страница и текст помещенный в контейнер похожий на bootstrap .container. Но здесь есть возможность некоторые секции сделать выходящими за пределы ширины основного контента, Например с особым фоном.</p>
+    <section class="section full container_grid_full gray_background">
+      <h2>Вот эта секция</h2>
+      <p>Она на всю ширину страницы, но контент находится в "основной колонке". Раньше нужно было составлять все секции, как отдельные контейнеры, чтобы можно было задавать разный фон. Теперь, как мне кажется это выглядит более элегантно</p>
+    </section>
+    <section class="section">
+      <h2>Социальные сети</h2>
+      <p>С одинаковой шириной</p>
+      <div class="socials_grid">
+        <div class="socials_grid__item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 25" id="footer-facebook-icon"><path d="M10.557 12.476H7.294V25H2.351V12.476H0V8.074h2.351V5.226C2.351 3.19 3.274 0 7.338 0L11 .016v4.272H8.343c-.436 0-1.048.229-1.048 1.2v2.59h3.694l-.432 4.398z"></path></svg>
+        </div>
+        <div class="socials_grid__item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" id="footer-linkedin-icon"><path d="M6.343 26.363c.48 0 .869-.389.869-.868V9.993a.869.869 0 00-.87-.868H2.646a.869.869 0 00-.869.868v15.502c0 .48.39.868.869.868h3.698zM.981 4.15a3.513 3.513 0 107.026 0 3.513 3.513 0 00-7.026 0zM25.738 26.363a.799.799 0 00.799-.798v-7.558c0-3.273 0-9.143-6.318-9.143-2.87 0-4.217 1.05-5.124 2.412V9.923a.799.799 0 00-.798-.798h-3.838a.799.799 0 00-.799.798v15.642c0 .44.358.798.799.798h3.838a.799.799 0 00.798-.798v-8.387c.1-1.127.596-3.638 3.042-3.638 3.152 0 2.834 3.669 2.834 4.754v7.27c0 .442.358.8.799.8h3.968z"></path></svg>        </div>
+        <div class="socials_grid__item">
+          <svg xmlns="http://www.w3.org/2000/svg" id="footer-insta-icon" viewBox="0 0 21 21" xml:space="preserve"><path class="asst0" d="M15.3 0H5.7C2.6 0 0 2.6 0 5.7v9.6C0 18.4 2.6 21 5.7 21h9.6c3.1 0 5.7-2.6 5.7-5.7V5.7C21 2.6 18.4 0 15.3 0zm-4.8 16.2c-3.2 0-5.7-2.6-5.7-5.7 0-3.2 2.6-5.7 5.7-5.7 3.2 0 5.7 2.6 5.7 5.7 0 3.2-2.5 5.7-5.7 5.7zm5.9-10.1c-.9 0-1.7-.8-1.7-1.7s.8-1.7 1.7-1.7c.9 0 1.7.8 1.7 1.7s-.8 1.7-1.7 1.7z"></path><path class="asst0" d="M10.5 6C8 6 6 8 6 10.5S8 15 10.5 15s4.5-2 4.5-4.5S13 6 10.5 6z"></path></svg>
+        </div>
+      </div>
+      <p>С шириной по размеру</p>
+      <div class="socials_grid socials_grid--min">
+        <div class="socials_grid__item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 25" id="footer-facebook-icon"><path d="M10.557 12.476H7.294V25H2.351V12.476H0V8.074h2.351V5.226C2.351 3.19 3.274 0 7.338 0L11 .016v4.272H8.343c-.436 0-1.048.229-1.048 1.2v2.59h3.694l-.432 4.398z"></path></svg>
+        </div>
+        <div class="socials_grid__item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" id="footer-linkedin-icon"><path d="M6.343 26.363c.48 0 .869-.389.869-.868V9.993a.869.869 0 00-.87-.868H2.646a.869.869 0 00-.869.868v15.502c0 .48.39.868.869.868h3.698zM.981 4.15a3.513 3.513 0 107.026 0 3.513 3.513 0 00-7.026 0zM25.738 26.363a.799.799 0 00.799-.798v-7.558c0-3.273 0-9.143-6.318-9.143-2.87 0-4.217 1.05-5.124 2.412V9.923a.799.799 0 00-.798-.798h-3.838a.799.799 0 00-.799.798v15.642c0 .44.358.798.799.798h3.838a.799.799 0 00.798-.798v-8.387c.1-1.127.596-3.638 3.042-3.638 3.152 0 2.834 3.669 2.834 4.754v7.27c0 .442.358.8.799.8h3.968z"></path></svg>        </div>
+        <div class="socials_grid__item">
+          <svg xmlns="http://www.w3.org/2000/svg" id="footer-insta-icon" viewBox="0 0 21 21" xml:space="preserve"><path class="asst0" d="M15.3 0H5.7C2.6 0 0 2.6 0 5.7v9.6C0 18.4 2.6 21 5.7 21h9.6c3.1 0 5.7-2.6 5.7-5.7V5.7C21 2.6 18.4 0 15.3 0zm-4.8 16.2c-3.2 0-5.7-2.6-5.7-5.7 0-3.2 2.6-5.7 5.7-5.7 3.2 0 5.7 2.6 5.7 5.7 0 3.2-2.5 5.7-5.7 5.7zm5.9-10.1c-.9 0-1.7-.8-1.7-1.7s.8-1.7 1.7-1.7c.9 0 1.7.8 1.7 1.7s-.8 1.7-1.7 1.7z"></path><path class="asst0" d="M10.5 6C8 6 6 8 6 10.5S8 15 10.5 15s4.5-2 4.5-4.5S13 6 10.5 6z"></path></svg>
+        </div>
+      </div>
+      <p>Переключение на вертикальный вид</p>
+      <div class="socials_grid socials_grid--vertical">
+        <div class="socials_grid__item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 25" id="footer-facebook-icon"><path d="M10.557 12.476H7.294V25H2.351V12.476H0V8.074h2.351V5.226C2.351 3.19 3.274 0 7.338 0L11 .016v4.272H8.343c-.436 0-1.048.229-1.048 1.2v2.59h3.694l-.432 4.398z"></path></svg>
+        </div>
+        <div class="socials_grid__item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" id="footer-linkedin-icon"><path d="M6.343 26.363c.48 0 .869-.389.869-.868V9.993a.869.869 0 00-.87-.868H2.646a.869.869 0 00-.869.868v15.502c0 .48.39.868.869.868h3.698zM.981 4.15a3.513 3.513 0 107.026 0 3.513 3.513 0 00-7.026 0zM25.738 26.363a.799.799 0 00.799-.798v-7.558c0-3.273 0-9.143-6.318-9.143-2.87 0-4.217 1.05-5.124 2.412V9.923a.799.799 0 00-.798-.798h-3.838a.799.799 0 00-.799.798v15.642c0 .44.358.798.799.798h3.838a.799.799 0 00.798-.798v-8.387c.1-1.127.596-3.638 3.042-3.638 3.152 0 2.834 3.669 2.834 4.754v7.27c0 .442.358.8.799.8h3.968z"></path></svg>        </div>
+        <div class="socials_grid__item">
+          <svg xmlns="http://www.w3.org/2000/svg" id="footer-insta-icon" viewBox="0 0 21 21" xml:space="preserve"><path class="asst0" d="M15.3 0H5.7C2.6 0 0 2.6 0 5.7v9.6C0 18.4 2.6 21 5.7 21h9.6c3.1 0 5.7-2.6 5.7-5.7V5.7C21 2.6 18.4 0 15.3 0zm-4.8 16.2c-3.2 0-5.7-2.6-5.7-5.7 0-3.2 2.6-5.7 5.7-5.7 3.2 0 5.7 2.6 5.7 5.7 0 3.2-2.5 5.7-5.7 5.7zm5.9-10.1c-.9 0-1.7-.8-1.7-1.7s.8-1.7 1.7-1.7c.9 0 1.7.8 1.7 1.7s-.8 1.7-1.7 1.7z"></path><path class="asst0" d="M10.5 6C8 6 6 8 6 10.5S8 15 10.5 15s4.5-2 4.5-4.5S13 6 10.5 6z"></path></svg>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h1>Блок иконки с изображением. Как бы череда строк</h1>
+      <div class="grid">
+        <div class="advantage cell-3">
+          <img src="img/advantage.png" alt="">
+          <p class="advantage__title">Faglige workshops</p>
+          <p>Fokus på konkurransekraft og samarbeidsprosjekter</p>
+        </div>
+        <div class="advantage cell-3">
+          <img src="img/advantage.png" alt="">
+          <p class="advantage__title">Faglige workshops</p>
+          <p>Fokus på konkurransekraft og samarbeidsprosjekter</p>
+        </div>
+        <div class="advantage cell-3">
+          <img src="img/advantage.png" alt="">
+          <p class="advantage__title">Faglige workshops</p>
+          <p>Fokus på konkurransekraft og samarbeidsprosjekter</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h1>Карточка команды. Как бы череда строк</h1>
+      <div class="grid">
+        <div class="user_card cell-3">
+          <img src="img/user_card.png" alt="">
+          <p class="advantage__title">Firstname Lastname</p>
+          <p>personalemail@mail.com</p>
+          <button class="user_card__button">Перейти</button>
+        </div>
+        <div class="user_card cell-3">
+          <img src="img/user_card.png" alt="">
+          <p class="advantage__title">Firstname Lastname</p>
+          <p>personalemail@mail.com<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dicta ea error ipsa officia repudiandae?</p>
+          <button class="user_card__button">Перейти</button>
+        </div>
+        <div class="button_bottom">
+          <div class="button_bottom__text">
+            <ul>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+          </div>
+          <span>Еще немного дополнительного текста</span>
+          <button>Ok</button>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock %}

@@ -29046,10 +29046,10 @@ exports.default = main;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\projects\lab\node_modules\error-overlay-webpack-plugin\lib\entry-basic.js */"./node_modules/error-overlay-webpack-plugin/lib/entry-basic.js");
-__webpack_require__(/*! D:\projects\lab\node_modules\error-overlay-webpack-plugin\lib\entry-devserver.js? */"./node_modules/error-overlay-webpack-plugin/lib/entry-devserver.js?");
-__webpack_require__(/*! D:\projects\lab\private\index.js */"./private/index.js");
-module.exports = __webpack_require__(/*! D:\projects\lab\private\index.scss */"./private/index.scss");
+__webpack_require__(/*! C:\projects\lab\node_modules\error-overlay-webpack-plugin\lib\entry-basic.js */"./node_modules/error-overlay-webpack-plugin/lib/entry-basic.js");
+__webpack_require__(/*! C:\projects\lab\node_modules\error-overlay-webpack-plugin\lib\entry-devserver.js? */"./node_modules/error-overlay-webpack-plugin/lib/entry-devserver.js?");
+__webpack_require__(/*! C:\projects\lab\private\index.js */"./private/index.js");
+module.exports = __webpack_require__(/*! C:\projects\lab\private\index.scss */"./private/index.scss");
 
 
 /***/ })

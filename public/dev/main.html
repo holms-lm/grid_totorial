@@ -10,7 +10,8 @@
 <body class="page page--main">
 <div class="d-flex flex-column vh-100">
   <main class="flex-grow-1 flex-shrink-0">
-      <div class="container">
+    
+  <div class="container">
   <h2>Образец bootstrap</h2>
   <h3>Перенос колонок</h3>
   <div class="row">
@@ -89,6 +90,19 @@
     <div class="cell-6 cell-md-4 cell-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
   </div>
 </div>
+<div class="container_grid_full">
+  <h3>Контейнер тоже грид</h3>
+  <div class="grid">
+    <div class="cell-6 cell-md-4 cell-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+    <div class="cell-6 cell-md-4 cell-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+    <div class="cell-6 cell-md-4 cell-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+    <div class="cell-6 cell-md-4 cell-xl-3"><div>col-2 col-md-4 col-xl-3</div></div>
+  </div>
+  <h4 class="full" style="background-color: #7b8287; text-align: center">Но можно делать full width блоки</h4>
+  <div class="full container_grid_full" style="background-color: #7b8287"><h4>Или даже так, текст в контейнере</h4></div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequatur dolorem ducimus eius et facilis hic itaque, nemo nulla omnis optio placeat recusandae rem sequi suscipit tempora tenetur, vel veniam!</p>
+</div>
+
   <div class="container">
     <section class="">
   <h2>Grid варианты</h2>
@@ -225,6 +239,7 @@
   </div>
   <hr>
 </section>
+
   </div>
   <div class="container grid_vs_flex">
     <h1>Что может grid по сравнению с flex и float</h1>
@@ -284,13 +299,9 @@
       <p>Равномерное распределение</p>
       <div class="row-grid-between">
         <p>один</p>
-        <p class="empty"></p>
         <p>два</p>
-        <p class="empty"></p>
         <p>три</p>
-        <p class="empty"></p>
         <p>четыре</p>
-        <p class="empty"></p>
         <p>пять</p>
       </div>
       <p>Автоматическое заполнение колонками</p>
@@ -339,7 +350,6 @@
 
   </main>
 </div>
-
 
 <script type="text/javascript" src="css/../js/main.js"></script></body>
 </html>
