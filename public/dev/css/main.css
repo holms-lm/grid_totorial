@@ -5768,6 +5768,9 @@ html {
 .section {
   padding: 50px 0;
 }
+.section--dark {
+  background-color: #323232;
+}
 
 .gray_background {
   background-color: darkgray;
@@ -5838,6 +5841,34 @@ html {
 .button_bottom__text {
   background-color: antiquewhite;
   padding-left: 30px;
+}
+
+.nav_bar {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  grid-column-gap: 29px;
+  list-style: none;
+}
+
+.icon_link {
+  display: grid;
+  grid-template-columns: 25px -webkit-max-content;
+  grid-template-columns: 25px max-content;
+  grid-template-rows: 25px;
+  grid-column-gap: 10px;
+  align-items: center;
+  font-size: 13px;
+  letter-spacing: 0.26px;
+  line-height: 18px;
+  color: #e0e0e0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 250ms;
+}
+.icon_link:hover {
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=main.css.map*/
